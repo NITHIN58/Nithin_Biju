@@ -111,6 +111,13 @@ const resumeData = {
         "Full Stack role using AWS and MongoDB to build a user management and sales reporting platform.",
       tech: ["AWS", "MongoDB", "Node.js", "React.js"],
     },
+    {
+      name: "Refinu",
+      tagline: "Personality Assessment & Improvement Platform",
+      description:
+        "Built the Admin Panel and Web App to help users assess their personality and identify areas for improvement. Developed backend services using Google Cloud and Firebase. Improved user engagement by 15% through reflection and nudging tools.",
+      tech: ["React.js", "Google Cloud", "Firebase", "Node.js"],
+    },
   ],
 
   // ── Education ──────────────────────────────────────────────
