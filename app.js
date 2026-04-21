@@ -51,6 +51,11 @@
       </div>
       <div class="hero-visa">${d.visa}</div>
       <p class="hero-summary">${d.summary}</p>
+      <div class="hero-actions">
+        <a href="${d.cvUrl || '#'}" download class="btn-download" target="_blank" rel="noopener noreferrer">
+          <span class="btn-download-icon">📄</span> Download CV
+        </a>
+      </div>
       <div class="stats-row">
         <div class="stat-item">
           <div class="stat-number" data-count="5">0+</div>

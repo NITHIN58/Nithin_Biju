@@ -11,6 +11,7 @@ const resumeData = {
   email: "nithinbiju58@gmail.com",
   phones: ["+447733590194", "+918129538913"],
   visa: "Full Right to Work | No Sponsorship Required",
+  cvUrl: "Nithin_Biju_CV.pdf",
 
   // ── Profile Summary ────────────────────────────────────────
   summary:
