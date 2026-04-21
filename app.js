@@ -354,14 +354,21 @@
     const aiWords = ["AI", "ML", "API", "npm", "git", "def", "fn()", "let", "var", "int", "for", "if", "==>", "( )", "{ }", "< >", "++", "0x", "//", "/**", "***", "React", "Next", "Node", "async", "await", "const", "true", "null", "=>{", "...x", "jsx", "tsx"];
 
     function resize() {
+      // Safari mobile: window.innerHeight can be wrong; use visual viewport if available
       w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
+      h = canvas.height = window.visualViewport
+        ? Math.max(window.visualViewport.height, window.innerHeight)
+        : window.innerHeight;
+      // Force canvas to fill on iOS
+      canvas.style.width = w + "px";
+      canvas.style.height = h + "px";
       init();
     }
 
     function init() {
+      const isMobile = w < 768;
       // ── Code Rain Streams ──
-      const streamCount = Math.floor(w / 18);
+      const streamCount = Math.floor(w / (isMobile ? 30 : 18));
       codeStreams = [];
       for (let i = 0; i < streamCount; i++) {
         codeStreams.push({
@@ -387,7 +394,7 @@
       }
 
       // ── Neural Network Nodes ──
-      const nodeCount = Math.min(Math.floor((w * h) / 25000), 60);
+      const nodeCount = Math.min(Math.floor((w * h) / (isMobile ? 40000 : 25000)), isMobile ? 30 : 60);
       neuralNodes = [];
       for (let i = 0; i < nodeCount; i++) {
         neuralNodes.push({
@@ -698,10 +705,27 @@
       mouse.y = e.clientY;
     });
 
+    // Touch support for mobile
+    document.addEventListener("touchmove", (e) => {
+      if (e.touches.length > 0) {
+        mouse.x = e.touches[0].clientX;
+        mouse.y = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    document.addEventListener("touchend", () => {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    }, { passive: true });
+
     resize();
     draw();
 
     window.addEventListener("resize", resize);
+    // Safari mobile: viewport changes when address bar hides/shows
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", resize);
+    }
   }
 
   // ── Scroll Reveal ─────────────────────────────────────────

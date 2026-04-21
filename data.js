@@ -10,7 +10,7 @@ const resumeData = {
   location: "London, United Kingdom",
   email: "nithinbiju58@gmail.com",
   phones: ["+447733590194", "+918129538913"],
-  visa: "UK Dependent (Health & Care Worker Partner) – Full Right to Work | No Sponsorship Required",
+  visa: "Full Right to Work | No Sponsorship Required",
 
   // ── Profile Summary ────────────────────────────────────────
   summary:
