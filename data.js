@@ -7,9 +7,9 @@ const resumeData = {
   // ── Personal Info ──────────────────────────────────────────
   name: "Nithin Biju",
   title: "Full-Stack Software Engineer",
-  location: "London, United Kingdom",
+  location: "32 Scarsbrook Road, London SE3 8AF",
   email: "nithinbiju58@gmail.com",
-  phones: ["+447733590194", "+918129538913"],
+  phones: ["07552968171"],
   visa: "Full Right to Work | No Sponsorship Required",
   cvUrl: "Nithin_Biju_CV.pdf",
 
