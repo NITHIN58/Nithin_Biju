@@ -7,7 +7,7 @@ const resumeData = {
   // ── Personal Info ──────────────────────────────────────────
   name: "Nithin Biju",
   title: "Full-Stack Software Engineer",
-  location: "32 Scarsbrook Road, London SE3 8AF",
+  location: "8 Springfield Road, Welling, London",
   email: "nithinbiju58@gmail.com",
   phones: ["07552968171"],
   visa: "Full Right to Work | No Sponsorship Required",
@@ -77,6 +77,14 @@ const resumeData = {
 
   // ── Projects ───────────────────────────────────────────────
   projects: [
+    {
+      name: "WorkProvider",
+      tagline: "Service Marketplace MVP",
+      description:
+        "A full-stack service marketplace with two user roles — Work Providers and Workers. Work Providers can post jobs with title, description, budget, and category, manage their listings, and review incoming bids. Workers browse active jobs and submit bids with custom amounts and messages. Features a clean contact-reveal mechanism so providers see worker details only after a bid is placed. Built as a personal project to explore Next.js App Router, Supabase, and TypeScript end-to-end.",
+      tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
+      personal: true,
+    },
     {
       name: "Verizon Prove Privacy Portal",
       tagline: "Enterprise Privacy & Compliance Platform",

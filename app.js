@@ -134,8 +134,11 @@
     const cards = d.projects
       .map(
         (p, i) => `
-      <div class="project-card">
-        <div class="project-number">Project ${String(i + 1).padStart(2, "0")}</div>
+      <div class="project-card${p.personal ? ' project-card--personal' : ''}">
+        <div class="project-card-header-row">
+          <div class="project-number">Project ${String(i + 1).padStart(2, "0")}</div>
+          ${p.personal ? '<span class="project-personal-badge">✦ Personal Project</span>' : ''}
+        </div>
         <div class="project-name">${p.name}</div>
         <div class="project-tagline">${p.tagline}</div>
         <div class="project-desc">${p.description}</div>
