@@ -134,10 +134,9 @@
     const cards = d.projects
       .map(
         (p, i) => `
-      <div class="project-card${p.personal ? ' project-card--personal' : ''}">
+      <div class="project-card">
         <div class="project-card-header-row">
           <div class="project-number">Project ${String(i + 1).padStart(2, "0")}</div>
-          ${p.personal ? '<span class="project-personal-badge">✦ Personal Project</span>' : ''}
         </div>
         <div class="project-name">${p.name}</div>
         <div class="project-tagline">${p.tagline}</div>
@@ -158,7 +157,36 @@
     app.appendChild(section);
   }
 
-  // ── 5. Education ───────────────────────────────────────────
+  // ── 5. Personal Projects Section ────────────────────────────
+  function renderPersonalProjects() {
+    const cards = d.personalProjects
+      .map(
+        (p, i) => `
+      <div class="project-card project-card--personal">
+        <div class="project-card-header-row">
+          <div class="project-number">Project ${String(i + 1).padStart(2, "0")}</div>
+          <span class="project-personal-badge">✶ Personal Project</span>
+        </div>
+        <div class="project-name">${p.name}</div>
+        <div class="project-tagline">${p.tagline}</div>
+        <div class="project-desc">${p.description}</div>
+        <div class="project-tech">
+          ${p.tech.map((t) => `<span class="project-tech-tag">${t}</span>`).join("")}
+        </div>
+      </div>`
+      )
+      .join("");
+
+    const section = html(
+      "section",
+      "section",
+      `<h2 class="section-title" id="personal"><span class="section-number">04.</span> Personal Projects</h2>
+       <div class="projects-grid">${cards}</div>`
+    );
+    app.appendChild(section);
+  }
+
+  // ── 6. Education ───────────────────────────────────────────
   function renderEducation() {
     const certs = d.certifications
       .map((c) => `<span class="info-tag">${c}</span>`)
@@ -173,7 +201,7 @@
     const section = html(
       "section",
       "section",
-      `<h2 class="section-title" id="education"><span class="section-number">04.</span> Education & More</h2>
+      `<h2 class="section-title" id="education"><span class="section-number">05.</span> Education &amp; More</h2>
        <div class="edu-card">
          <div class="edu-degree">${d.education.degree}</div>
          <div class="edu-institution">${d.education.institution}</div>
@@ -319,7 +347,7 @@
 
   // ── Active Nav on Scroll ──────────────────────────────────
   function initActiveNav() {
-    const sections = ["skills", "experience", "projects", "education"];
+    const sections = ["skills", "experience", "projects", "personal", "education"];
     const navLinks = document.querySelectorAll(".nav-link");
 
     const observer = new IntersectionObserver(
@@ -785,6 +813,7 @@
   renderSkills();
   renderExperience();
   renderProjects();
+  renderPersonalProjects();
   renderEducation();
   renderFooter();
   initBackground();
