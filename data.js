@@ -124,12 +124,11 @@ const resumeData = {
   // ── Personal Projects ──────────────────────────────────────
   personalProjects: [
     {
-      name: "Household Hub - Application Walkthrough",
+      name: "Household Hub",
       tagline: "Smart Household Duty, Rent & Expense Splitter",
       description:
         "A responsive, real-time web application built with React, Tailwind CSS, and Firebase (Firestore & Authentication) to streamline household operations. Features rotational cleaning duty scheduling with real-time task completion, 4-way rent & 5-way utility expense splitter with pairwise debt minimization algorithms, per-bill payback tracking, and a rent & fixed bill tracker with payment proof image uploads.",
       tech: ["React.js", "Tailwind CSS", "Firebase", "Firestore", "JavaScript (ES6+)", "Vite"],
-      link: "https://nithin58.github.io/household-hub/",
     },
     {
       name: "WorkProvider",
