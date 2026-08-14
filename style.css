@@ -876,6 +876,46 @@ body:hover #mouse-glow {
   box-shadow: 0 0 12px rgba(0, 229, 255, 0.15);
 }
 
+/* ── Project Action Link ───────────────────────────────────── */
+.project-actions {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  padding: 6px 14px;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.project-link-btn:hover {
+  background: rgba(0, 229, 255, 0.18);
+  border-color: rgba(0, 229, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 229, 255, 0.2);
+}
+
+.project-link-btn .link-arrow {
+  transition: transform 0.2s ease;
+}
+
+.project-link-btn:hover .link-arrow {
+  transform: translate(2px, -2px);
+}
+
 /* ── Education & Certifications ────────────────────────────── */
 .edu-card {
   background: var(--bg-card);

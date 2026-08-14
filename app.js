@@ -144,6 +144,13 @@
         <div class="project-tech">
           ${p.tech.map((t) => `<span class="project-tech-tag">${t}</span>`).join("")}
         </div>
+        ${p.link ? `
+        <div class="project-actions">
+          <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+            <span>Live Application</span>
+            <span class="link-arrow">↗</span>
+          </a>
+        </div>` : ""}
       </div>`
       )
       .join("");
@@ -173,6 +180,13 @@
         <div class="project-tech">
           ${p.tech.map((t) => `<span class="project-tech-tag">${t}</span>`).join("")}
         </div>
+        ${p.link ? `
+        <div class="project-actions">
+          <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+            <span>Live Application</span>
+            <span class="link-arrow">↗</span>
+          </a>
+        </div>` : ""}
       </div>`
       )
       .join("");
