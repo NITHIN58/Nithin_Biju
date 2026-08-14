@@ -127,14 +127,14 @@ const resumeData = {
       name: "Household Hub",
       tagline: "Smart Household Duty, Rent & Expense Splitter",
       description:
-        "A responsive, real-time web application built with React, Tailwind CSS, and Firebase (Firestore & Authentication) to streamline household operations. Features rotational cleaning duty scheduling with real-time task completion, 4-way rent & 5-way utility expense splitter with pairwise debt minimization algorithms, per-bill payback tracking, and a rent & fixed bill tracker with payment proof image uploads.",
+        "Real-time household management app built with React, Tailwind CSS, and Firebase. Features rotational cleaning duty scheduling, 4-way rent & 5-way utility expense splitter with debt minimization, and fixed bills receipt tracking.",
       tech: ["React.js", "Tailwind CSS", "Firebase", "Firestore", "JavaScript (ES6+)", "Vite"],
     },
     {
       name: "WorkProvider",
       tagline: "Service Marketplace MVP",
       description:
-        "A full-stack service marketplace with two user roles — Work Providers and Workers. Work Providers can post jobs with title, description, budget, and category, manage their listings, and review incoming bids. Workers browse active jobs and submit bids with custom amounts and messages. Features a clean contact-reveal mechanism so providers see worker details only after a bid is placed. Built as a personal project to explore Next.js App Router, Supabase, and TypeScript end-to-end.",
+        "Full-stack service marketplace MVP connecting Work Providers and Workers. Features job posting, custom bidding system, contact-reveal mechanics, and role-based dashboards built with Next.js App Router and Supabase.",
       tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
     },
   ],
